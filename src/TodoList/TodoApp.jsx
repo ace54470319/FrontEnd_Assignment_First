@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TodoInput from './TodoInput';
 import TodoList from './TodoList';
+import FilterButton from './FilterButton';
 
 function TodoApp(props) {
   let [todoList, setTodoList] = useState([]);
@@ -21,7 +22,13 @@ function TodoApp(props) {
   return (
     <div>
       <TodoInput {...stateProps}></TodoInput>
-      <TodoList {...stateProps}></TodoList>
+      {filternum == 0 && <TodoList {...stateProps} todoList={todoList}></TodoList>}
+
+      {filternum == 1 && <TodoList {...stateProps} todoList={completeList}></TodoList>}
+
+      {filternum == 2 && <TodoList {...stateProps} todoList={uncompleteList}></TodoList>}
+
+      <FilterButton setFilterenum={setFilterenum}></FilterButton>
     </div>
   );
 }
