@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TodoInput from './TodoInput';
+import TodoList from './TodoList';
 
 function TodoApp(props) {
   let [todoList, setTodoList] = useState([]);
@@ -20,7 +21,7 @@ function TodoApp(props) {
   return (
     <div>
       <TodoInput {...stateProps}></TodoInput>
-      <div>{todoList}</div>
+      <TodoList {...stateProps}></TodoList>
     </div>
   );
 }
