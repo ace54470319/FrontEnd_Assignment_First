@@ -5,8 +5,13 @@ function QuestionData(props) {
   };
 
   function nextPage() {
-    props.setNowQuizNum((prev) => prev + 1);
-    props.setTimer(5);
+    if (props.nowQuizNum < props.quizList.length - 1) {
+      props.setNowQuizNum((prev) => prev + 1);
+      props.setTimer(5);
+    } else {
+      alert('문제가 끝났습니다. 결과화면으로 넘어갑니다.');
+      props.setIsDone(true);
+    }
   }
 
   useEffect(() => {
