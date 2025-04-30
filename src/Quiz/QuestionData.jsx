@@ -15,6 +15,8 @@ function QuestionData(props) {
   }
 
   useEffect(() => {
+    console.log(props.nowAnswerValue);
+    console.log(props.quizList[props.nowQuizNum].answer);
     if (props.timer < 0) {
       if (props.nowAnswerValue == props.quizList[props.nowQuizNum].answer) {
         props.setIsAnswer((prev) => [...prev, props.nowAnswerValue]);

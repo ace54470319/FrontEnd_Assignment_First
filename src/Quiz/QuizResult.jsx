@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 function QuizResult(props) {
   function ReStart() {
-    props.setIsDone(false); // 퀴즈 다시 시작
-    props.setNowQuizNum(0); // 문제 번호 리셋
-    props.setIsAnswer([]); // 정답 리스트 리셋
-    props.setTimer(5); // 타이머 리셋
-    props.setNowAnswerValue(null); // 현재 고른 답 초기화
+    props.setIsDone(false);
+    props.setNowQuizNum(0);
+    props.setIsAnswer([]);
+    props.setTimer(5);
+    props.setNowAnswerValue(null);
   }
   return (
     <div>
