@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 function QuestionData(props) {
   const ChangeAnswr = (e) => {
     props.setNowAnswerValue(e.target.value);
@@ -46,6 +47,7 @@ function QuestionData(props) {
 
   return (
     <div>
+      {/* 오브젝트 배열로 만들어서 이 부분을 배열로 돌려놓는 부분은 gpt 참조함 */}
       {Object.entries(props.questionList[props.nowQuizNum]).map(([key, value]) => {
         return (
           <div key={key}>
