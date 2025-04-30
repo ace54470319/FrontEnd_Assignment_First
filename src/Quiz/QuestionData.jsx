@@ -5,6 +5,9 @@ function QuestionData(props) {
   };
 
   function nextPage() {
+    if (props.nowAnswerValue == props.quizList[props.nowQuizNum].answer) {
+      props.setIsAnswer((prev) => [...prev, props.nowAnswerValue]);
+    }
     if (props.nowQuizNum < props.quizList.length - 1) {
       props.setNowQuizNum((prev) => prev + 1);
       props.setTimer(5);
