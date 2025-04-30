@@ -12,11 +12,13 @@ function QuizApp() {
     { quiz: '사과는 영어로?', answer: 'apple' },
     { quiz: '바나나는 영어로?', answer: 'banana' },
     { quiz: '퉁퉁... 사후르는 퉁이 몇개?', answer: 9 },
+    { quiz: '트랄라렐로 트랄랄라 vs 봄바르딜로 크로코딜로', answer: '봄바르딜로 크로코딜로' },
   ];
   const questionList = [
     { 1: 'apple', 2: 'banana', 3: 'grape' },
     { 1: 'orange', 2: 'water', 3: 'banana' },
     { 1: 7, 2: 8, 3: 9 },
+    { 1: '봄바르딜로 크로코딜로', 2: '트랄라렐로 트랄랄라', 3: '퉁퉁퉁퉁퉁퉁퉁퉁퉁 사후르' },
   ];
   const [nowQuizNum, setNowQuizNum] = useState(0);
 
