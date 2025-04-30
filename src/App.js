@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import FilterButton from './TodoList/FilterButton';
 import TodoApp from './TodoList/TodoApp';
 import PlusMinusBtn from './PlusMinusBtn/PlusMinusBtn';
 
