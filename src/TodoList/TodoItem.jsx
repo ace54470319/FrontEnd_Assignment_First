@@ -24,7 +24,7 @@ function TodoItem(props) {
               console.log(props.completeList);
               props.setUncompleteList(props.uncompleteList.filter((item) => item !== props.text));
             } else {
-              alert('이미 완룍한 작업입니다.');
+              alert('이미 완료한 작업입니다.');
             }
           }}
         >
